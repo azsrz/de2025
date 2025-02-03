@@ -16,6 +16,7 @@ file size is printed out by the extract task
 green_tripdata_2020-04.csv (read from label)
 
 ## Question 3 - 5:
+- pgcli -h localhost -d postgres-zoomcamp -U kestr -p 5432
 - Yellow taxi csv rows year 2020:\
     select COUNT(1) FROM yellow_tripdata WHERE SUBSTRING(filename, 17, 4)='2020'\
 24648499
