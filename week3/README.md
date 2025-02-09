@@ -54,6 +54,11 @@ SELECT DISTINCT VendorID FROM sinuous-gist-448417-j9.nytaxi.yellow_tripdata_part
 SELECT DISTINCT VendorID FROM sinuous-gist-448417-j9.nytaxi.yellow_tripdata_non_partitoned WHERE DATE(tpep_dropoff_datetime) >= '2024-03-01' AND DATE(tpep_dropoff_datetime) <= '2024-03-15';
 ~~~
 
+## It is not the best practice to always cluster
+- clustering adds overhead during data writes and table maintainence
+- The performance gain is negligible for small tables
+- It also depends on the type of query you want to perform 
+
 ## get number of rows
 #### the number of rows are already cached (storage information) so no need to read the table
 ~~~
