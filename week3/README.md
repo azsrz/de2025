@@ -55,6 +55,7 @@ SELECT DISTINCT VendorID FROM sinuous-gist-448417-j9.nytaxi.yellow_tripdata_non_
 ~~~
 
 ## get number of rows
+#### the number of rows are already cached (storage information) so no need to read the table
 ~~~
 -- 0B
 SELECT COUNT(*) FROM sinuous-gist-448417-j9.nytaxi.yellow_tripdata_partitoned_clustered;
